@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Subsuelo. Un archivo de indumentaria urbana.">
+  <meta name="theme-color" content="#111010">
+  <title>Subsuelo · Drop 01</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preload" as="image" href="assets/campana-drop-01.png">
+  <link rel="preload" as="font" type="font/ttf" href="assets/barlow-condensed-700.ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="editorial.css">
+  <script defer src="piezas.js"></script>
+  <script defer src="catalogo.js"></script>
+  <script defer src="editorial.js"></script>
+</head>
+<body>
+  <div class="brand-intro" aria-hidden="true">
+    <div class="intro-lockup">
+      <div class="intro-mark"><img src="assets/logo.png" alt="" fetchpriority="high"></div>
+      <p class="intro-name">Drop 01</p>
+    </div>
+  </div>
+  <a class="skip" href="#prendas">Ir a las prendas</a>
+  <main class="showroom" aria-labelledby="brand">
+    <div class="showroom-ambient" aria-hidden="true"></div>
+    <section class="campaign" id="inicio" aria-labelledby="brand">
+      <div class="campaign-scene">
+        <img class="campaign-photo" src="assets/campana-drop-01.png" alt="Campera Bomber Andén y Cargo Túnel en la campaña Drop 01 de Subsuelo." width="1536" height="1024" fetchpriority="high">
+      </div>
+      <div class="campaign-beam" aria-hidden="true"></div>
+      <header class="campaign-header">
+        <a class="campaign-brand" href="#inicio" aria-label="Subsuelo, inicio"><img src="assets/logo.png" alt="Subsuelo" width="450" height="150"></a>
+        <nav aria-label="Principal"><a href="#prendas">Colección</a><a href="#locales">Locales</a></nav>
+      </header>
+      <div class="campaign-copy">
+        <p class="campaign-eyebrow">Indumentaria urbana</p>
+        <h1 id="brand"><span>DROP 01</span></h1>
+        <a class="campaign-cta" href="#prendas"><span>Ver colección</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="campaign-bottom"><span>Siluetas amplias. Detalles a la vista.</span><a href="#prendas">Explorá el drop <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="archive" id="prendas" aria-labelledby="collection-title">
+      <div class="archive-head">
+        <h2 id="collection-title"><span>Colección</span></h2>
+        <button class="outfit-open" type="button" aria-haspopup="dialog">Armá tu conjunto</button>
+        <div class="filters">
+          <select id="tipo" aria-label="Tipo de prenda">
+            <option value="">Todos los tipos</option>
+            <option value="ropa">Ropa</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+          <select id="color" aria-label="Color">
+            <option value="">Todos los colores</option>
+          </select>
+        </div>
+        <div class="rail-controls" role="group" aria-label="Recorrer la colección">
+          <button class="rail-playback" type="button" aria-label="Reanudar recorrido automático" aria-controls="productos">▶</button>
+          <button type="button" data-step="-1" aria-label="Prendas anteriores">←</button>
+          <button type="button" data-step="1" aria-label="Prendas siguientes">→</button>
+        </div>
+      </div>
+      <ul id="productos" class="pieces" aria-label="Prendas y accesorios de la colección"></ul>
+      <div class="collection-bottom"><p>Arrastrá para explorar. Elegí una pieza para verla de cerca.</p><span class="rail-track" aria-hidden="true"><span></span></span></div>
+      <p id="filter-status" role="status" hidden></p>
+      <noscript>Activá JavaScript para explorar las prendas.</noscript>
+    </section>
+
+    <section class="display" id="detalle" aria-labelledby="piece-title" hidden>
+      <div class="showroom-ambient detail-ambient" aria-hidden="true"></div>
+      <div class="piece-info" id="ficha">
+        <a class="back-to-collection" href="#prendas">← Colección</a>
+        <h2 id="piece-title" tabindex="-1"><span></span></h2>
+      </div>
+
+      <figure class="look" aria-labelledby="piece-title">
+        <div class="stage" id="stage" tabindex="0" role="group" aria-label="Fotos de la prenda. Hacé clic o tocá la foto para usar la lupa. Con el teclado, apretá Enter o la barra espaciadora. Para cambiar de ángulo, usá la ruedita, arrastrá la foto o apretá las flechas.">
+          <div class="stage-frame"><div class="stage-media"></div></div>
+          <div class="stage-light" aria-hidden="true"></div>
+          <p class="stage-error" hidden>No pudimos cargar esta foto. Probá con otro ángulo.</p>
+          <span class="frame-mark frame-mark-top" aria-hidden="true"></span>
+          <span class="frame-mark frame-mark-bottom" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-controls" role="group" aria-label="Vistas de la prenda">
+          <div class="angle-photos"></div>
+        </div>
+      </figure>
+      <div class="piece-specs">
+        <p class="piece-description"></p>
+        <dl class="specs-data">
+          <div><dt>Corte y estilo</dt><dd data-spec="fit"></dd></div>
+          <div><dt>Materiales</dt><dd data-spec="materials"></dd></div>
+          <div><dt>Talles de referencia</dt><dd><ul class="specs-sizes"></ul></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer class="brand-footer">
+    <details class="brand-story" id="brand-story">
+      <summary>Sobre Subsuelo <span class="brand-story-icon" aria-hidden="true"></span></summary>
+      <div class="brand-story-content">
+        <p>Ropa urbana de siluetas amplias, telas lavadas y costuras a la vista. Del jean desflecado a la gorra bordada, cada pieza tiene un detalle que vale mirar de cerca.</p>
+        <a href="#prendas">Volvé a la colección <span aria-hidden="true">↑</span></a>
+      </div>
+    </details>
+    <section class="shops" id="locales" aria-labelledby="shops-title">
+      <div class="shops-heading"><p class="campaign-eyebrow">El punto de encuentro</p><h3 id="shops-title">Locales</h3></div>
+      <div class="shop-sign">
+        <div class="shop-fixture" aria-hidden="true"><span></span></div>
+        <div class="shop-fixture shop-fixture-right" aria-hidden="true"><span></span></div>
+        <div class="shop-sign-face" aria-hidden="true">
+          <img src="assets/logo.png" alt="" width="450" height="150" loading="lazy">
+          <span class="shop-sign-name">Chacarita</span>
+        </div>
+        <div class="shop-switch" role="group" aria-label="Elegí una sucursal en el cartel">
+          <button type="button" data-shop="chacarita" aria-pressed="true" aria-controls="shop-info"><span>Chacarita</span></button>
+          <button type="button" data-shop="guemes" aria-pressed="false" aria-controls="shop-info"><span>Güemes</span></button>
+        </div>
+      </div>
+      <div class="shops-info">
+        <div class="shop-address" id="shop-info" aria-live="polite" aria-atomic="true">
+          <p class="shop-location">Chacarita, Buenos Aires</p>
+          <p class="shop-street">Pasaje del Túnel 48</p>
+          <p class="shop-hours">Martes a sábado, de 14 a 20 h</p>
+        </div>
+        <p class="shop-note">Locales y direcciones ficticias.</p>
+      </div>
+    </section>
+    <div class="footer-end"><a href="#inicio" aria-label="Subsuelo, volver al inicio"><img src="assets/logo.png" alt="Subsuelo" width="450" height="150" loading="lazy"></a><span>Drop 01 · Archivo de indumentaria urbana</span><a href="#inicio">Volver arriba ↑</a></div>
+  </footer>
+  <dialog class="outfit" aria-labelledby="outfit-title">
+    <div class="outfit-header">
+      <h2 id="outfit-title">Armá tu conjunto</h2>
+      <form method="dialog"><button type="submit" aria-label="Cerrar probador">×</button></form>
+    </div>
+    <div class="outfit-layout">
+      <div class="outfit-view">
+        <div class="outfit-stage" role="img" aria-label="Vista del maniquí"></div>
+        <div class="outfit-switches" role="group" aria-label="Ángulo del conjunto">
+          <button type="button" data-outfit-angle="0" aria-pressed="true">Frente</button>
+          <button type="button" data-outfit-angle="1" aria-pressed="false">Tres cuartos</button>
+          <button type="button" data-outfit-angle="2" aria-pressed="false">Espalda</button>
+        </div>
+      </div>
+      <div class="outfit-controls">
+        <div class="outfit-presets" role="group" aria-label="Conjuntos preparados"></div>
+        <label for="outfit-model">Maniquí</label>
+        <select id="outfit-model">
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+        </select>
+        <fieldset>
+          <legend>Elegí las piezas</legend>
+          <div class="outfit-options"></div>
+        </fieldset>
+        <p class="outfit-status" role="status"></p>
+        <button class="outfit-generate" type="button" hidden>Generar vistas con IA</button>
+        <p class="outfit-note">Si dos piezas ocupan el mismo lugar, queda la última que elegiste.</p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
+
